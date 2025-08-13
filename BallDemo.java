@@ -1,4 +1,4 @@
-import java.awt.Color;
+import java.awt.Color; 
 
 /**
  * Class BallDemo - a short demonstration showing animation with the 
