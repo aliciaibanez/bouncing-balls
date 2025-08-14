@@ -42,6 +42,9 @@ public class BallDemo
 
         //Valores para el color
         Random generadorColor = new Random(); // Genera el color aleatorio
+        
+        //Valores para la posición de inicio
+        Random generadorPosicion = new Random(); // Genera la posición de inicio aleatoria
 
         int i = 0;
         while (i < numeroBolas) {
@@ -49,9 +52,11 @@ public class BallDemo
             int red = generadorColor.nextInt(256);
             int green = generadorColor.nextInt(256);
             int blue = generadorColor.nextInt(256);
-
+            int posicionX = generadorPosicion.nextInt(200) + 50;
+            int posicionY = generadorPosicion.nextInt(200) + 50;
+        
             Color colorAleatorio = new Color(red, green, blue);
-            BouncingBall bola = new BouncingBall (50, 50, diametro, colorAleatorio, ground, myCanvas);
+            BouncingBall bola = new BouncingBall (posicionX, posicionY, diametro, colorAleatorio, ground, myCanvas);
             bola.draw();
             balls.add(bola);
             i++;
