@@ -14,6 +14,7 @@ import java.util.Random;
 public class BallDemo   
 {
     private Canvas myCanvas;
+    private static int cantidadDeBolasExistentes = 0;
 
     /**
      * Create a BallDemo object. Creates a fresh canvas and makes it visible.
@@ -57,6 +58,7 @@ public class BallDemo
         
             Color colorAleatorio = new Color(red, green, blue);
             BouncingBall bola = new BouncingBall (posicionX, posicionY, diametro, colorAleatorio, ground, myCanvas);
+            cantidadDeBolasExistentes++;
             bola.draw();
             balls.add(bola);
             i++;
@@ -74,5 +76,9 @@ public class BallDemo
                 }
             }
         }
+    }
+    
+    public static int getCantidadDeBolasExistentes() {
+        return cantidadDeBolasExistentes;
     }
 }
